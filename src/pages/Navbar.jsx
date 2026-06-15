@@ -14,16 +14,17 @@ export default function Navbar() {
   }, [debouncedSearchTerm]);
   return (
     <nav className='bg-gray-800 p-4 text-white flex items-center justify-between'>
-      <h1 className='text-2xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-amber-600 via-blue-800 to-amber-800 animate-pulse'>
+      <h1 className='text-2xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-amber-600 via-blue-800 to-amber-800 uppercase animate-pulse'>
         Ceejay Blogger
       </h1>
 
-      <section className='flex items-center'>
+      <section className='flex items-center w-sm'>
         <input
-          type='text'
+          type='Search for anything ...'
           placeholder='Search ...'
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
+          className='p-2 grow italic rounded-full border'
         />
       </section>
       <div className='flex items-center'>

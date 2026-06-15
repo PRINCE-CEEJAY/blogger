@@ -7,7 +7,7 @@ import Posts from './pages/Posts';
 
 export default function App() {
   return (
-    <>
+    <div>
       <Routes>
         <Route
           path='/'
@@ -18,6 +18,6 @@ export default function App() {
         <Route path='/admin' element={<Admin />} />
         <Route path="*" element={<NotFound/>}/>
       </Routes>
-    </>
+    </div>
   );
 }
