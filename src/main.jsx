@@ -5,14 +5,17 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App.jsx';
 import store from './app/store';
 import { Provider } from 'react-redux';
-import Navbar from "./pages/Navbar"
+import Navbar from './pages/Navbar';
+import { AuthProvider } from './context/AuthContext';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
-      <Provider store={store}>
-        <Navbar/>
-        <App />
-      </Provider>
+      <AuthProvider>
+        <Provider store={store}>
+          <Navbar />
+          <App />
+        </Provider>
+      </AuthProvider>
     </Router>
   </StrictMode>,
 );
